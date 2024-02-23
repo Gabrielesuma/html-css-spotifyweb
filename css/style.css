@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    color: white;
+}
+
+:root {
+	--color-sidebar: #000000;
+	--color-header: #080b12;
+	--color-main: #141922;
+	--color-toolbar: #282828;
+}
+
+.wrapper{
+    height: 100vh;
+    /*overflow: hidden;*/
+}
+
+#toolbar{
+    background-color: var(--color-toolbar);
+    height: 90px;
+}
+
+.content{
+    height: calc(100vh - 90px);
+    width: 100%;
+    background-color: blue;
+}
+
+#sidebar{
+    width: 200px;
+    height: 100%;
+    background-color: var(--color-sidebar);
+}
+
+#sidebar img{
+    width: 85%;
+    padding: 20px;
+}
+
+main{
+    width: calc(100% - 200px); /*flex-grow: 1;*/
+    background-color: var(--color-main);
+    padding-top: 100px;
+    padding: 100px 20px 20px 20px;
+    overflow-y: auto;
+}
+
+main li{
+    padding-left: 20px;
+    font-size: 0.7em;
+}
+
+.album{
+    width: calc(100% / 6 - 10px);
+}
+
+.album *{
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+main img{
+    width: 100%;
+}
+
+.artist{
+    font-size: 0.7em;
+    color: grey;
+    text-align: center;
+}
+
+.sug{
+    font-size: 0.7em;
+    color: grey;
+    padding-bottom: 20px;
+}
+
+h5{
+    text-align: center;
+}
+
+h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.round{
+    width: calc(100% / 6 - 10px);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.round img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header{
+    background-color: var(--color-header) /* rgba(37, 5, 5, 0.377)*/;
+    opacity: 0.5;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+}
+
+/*utility*/
+
+
+
+/*flex utility*/
+
+.d-flex{
+    display: flex;
+}
+
+.align{
+    justify-content: center;
+}
+
+.s-between{
+    justify-content: space-between;
+}
