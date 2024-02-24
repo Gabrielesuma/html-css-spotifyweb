@@ -47,10 +47,77 @@ body{
     background-color: var(--color-sidebar);
 }
 
-#sidebar img{
+#sidebar img:first-child{
     width: 85%;
     padding: 20px;
 }
+
+#sidebar h5{
+    text-align: left;
+    padding: 20px;
+}
+
+#sidebar{
+    font-size: 0.8em;
+}
+
+.fa-plus{
+    background-color: grey;
+    padding: 10px;
+}
+
+ul *{
+    padding-bottom: 10px;
+}
+
+.pad-bottom{
+    padding-bottom: 10px;
+}
+
+.pad-top{
+    padding-top: 40px;
+}
+
+.pad-top img{
+    width: 10%;
+}
+
+.pad-left{
+    padding-left: 20px;
+}
+
+#b-bottom{
+    border-bottom: 2px solid grey;
+    width: 160px;
+}
+
+ #sidebar h6{
+    display: inline-block;
+}
+
+/*toolbar*/
+
+#toolbar img{
+    aspect-ratio: 1 / 1;
+    padding: 15px;
+}
+
+.music-bar{
+    border-bottom: 2px solid grey;
+}
+
+.play{
+    padding-top: 20px;
+    width: 20%;
+}
+
+.tb-right{
+    padding-top: 30px;
+    width: 10%;
+}
+
+
+/*main*/
 
 main{
     width: calc(100% - 200px); /*flex-grow: 1;*/
@@ -122,9 +189,23 @@ h2{
     width: calc(100% - 200px);
 }
 
+.content .header .bot{
+    width: 250px;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    right: 50px;
+    top: 19px;
+}
+
+.bot a{
+    text-align: center;
+    width: 100%;
+}
+
 /*utility*/
-
-
 
 /*flex utility*/
 
@@ -138,4 +219,12 @@ h2{
 
 .s-between{
     justify-content: space-between;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.row{
+    flex-direction: row;
 }
