@@ -207,6 +207,10 @@ h2{
 
 /*utility*/
 
+main img:hover{
+    opacity: 0.5;
+}
+
 /*flex utility*/
 
 .d-flex{
@@ -227,4 +231,15 @@ h2{
 
 .row{
     flex-direction: row;
+}
+
+/*media query*/
+
+@media screen and (max-width: 768px){
+
+    .album{
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% / 4 - 10px);
+    }
 }
