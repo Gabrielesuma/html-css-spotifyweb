@@ -41,6 +41,8 @@ body{
     background-color: blue;
 }
 
+/*sidebar*/
+
 #sidebar{
     width: 200px;
     height: 100%;
@@ -59,6 +61,18 @@ body{
 
 #sidebar{
     font-size: 0.8em;
+}
+
+#logo-small{
+    display: none;
+}
+
+#sidebar .pad-left img{
+    opacity: 0.8;
+    height: 27px;
+    width: auto;
+    display: inline-block;
+    vertical-align: bottom;
 }
 
 .fa-plus{
@@ -133,12 +147,8 @@ main li{
 }
 
 .album{
-    width: calc(100% / 6 - 10px);
-}
-
-.album *{
-    padding-bottom: 10px;
-    padding-right: 10px;
+    width: calc(100% / 6);
+    padding: 10px;
 }
 
 main img{
@@ -155,6 +165,7 @@ main img{
     font-size: 0.7em;
     color: grey;
     padding-bottom: 20px;
+    padding-left: 10px;
 }
 
 h5{
@@ -162,12 +173,12 @@ h5{
 }
 
 h2{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 10px;
 }
 
 .round{
-    width: calc(100% / 6 - 10px);
+    width: calc(100% / 6);
+    padding: 10px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
@@ -235,11 +246,37 @@ main img:hover{
 
 /*media query*/
 
+@media screen and (max-width: 1200px){
+
+    .wrap{
+        flex-wrap: wrap;
+    }
+
+    .album{
+        width: calc(100% / 4);
+    }
+
+    .round{
+        width: calc(100% / 4);
+    }
+}
+
 @media screen and (max-width: 768px){
 
     .album{
-        display: flex;
-        flex-wrap: wrap;
-        width: calc(100% / 4 - 10px);
+        width: calc(100% / 2);
+    }
+
+    .round{
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 576px){
+    #sidebar{
+        width: 50px;
+    }
+    main{
+        width: calc(100% - 50px);
     }
 }
