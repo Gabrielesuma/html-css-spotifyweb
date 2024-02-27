@@ -169,6 +169,23 @@ main li{
     font-size: 0.7em;
 }
 
+main a:after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: trasparent;
+}
+
+a:hover, main.active{
+    color: grey;
+}
+
+main a.active:after, main a:hover:after{
+    background-color: green;
+}
+
 .album{
     width: calc(100% / 6);
     padding: 10px;
@@ -214,7 +231,7 @@ h2{
 }
 
 .header{
-    background-color: var(--color-header) /* rgba(37, 5, 5, 0.377)*/;
+    background-color: var(--color-header);
     opacity: 0.5;
     height: 80px;
     position: fixed;
@@ -241,9 +258,9 @@ h2{
 
 /*utility*/
 
-main img:hover{
+/*main img:hover{
     opacity: 0.5;
-}
+}*/
 
 /*flex utility*/
 
@@ -306,14 +323,8 @@ main img:hover{
     #sidebar h5, span, .playlist, #sidebar h6, #sidebar #b-bottom, #logo{
         display: none;
     }
-
-    #logo-small{
-        width: 40px;
-        height:40px
-    }
-
-    #logo-small img{
+    .content #sidebar #logo-small img{
         display: block;
-        width: 100%;
+        width: 60px;
     }
 }
