@@ -47,6 +47,8 @@ body{
     width: 200px;
     height: 100%;
     background-color: var(--color-sidebar);
+    min-height: 480px;
+    overflow: hidden;
 }
 
 #sidebar img:first-child{
@@ -69,10 +71,19 @@ body{
 
 #sidebar .pad-left img{
     opacity: 0.8;
-    height: 27px;
+    height: 10px;
     width: auto;
     display: inline-block;
     vertical-align: bottom;
+}
+
+#sidebar .playlist{
+    min-height: 0;
+}
+
+#sidebar .playlist ul{
+    height: calc(100% - 30px);
+    overflow-y: auto;
 }
 
 .fa-plus{
@@ -117,7 +128,17 @@ ul *{
 }
 
 .music-bar{
+    border-bottom: 2px solid lightgrey;
+    width: 70%;
+    position: relative;
+}
+
+.bar{
     border-bottom: 2px solid grey;
+    width: 30%;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
 }
 
 .play{
@@ -127,7 +148,8 @@ ul *{
 
 .tb-right{
     padding-top: 30px;
-    width: 10%;
+    padding-right: 20px;
+    width: 20%;
 }
 
 
@@ -230,6 +252,7 @@ main img:hover{
 
 .align{
     justify-content: center;
+    align-items: center;
 }
 
 .s-between{
@@ -278,5 +301,11 @@ main img:hover{
     }
     main{
         width: calc(100% - 50px);
+    }
+    #sidebar h5, span, .playlist, #sidebar h6, #sidebar #b-bottom, #logo{
+        display: none;
+    }
+    #logo-small{
+        display: inline-block;
     }
 }
